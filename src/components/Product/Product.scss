@@ -1,0 +1,48 @@
+.product-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.product-detail {
+  display: flex;
+  margin-bottom: 20px;
+
+  .product-images img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product-info {
+    margin-left: 20px;
+  }
+}
+
+.reviews {
+  margin-top: 20px;
+
+  .review-list .review {
+    margin-bottom: 10px;
+  }
+}
+
+.similar-products {
+  margin-top: 20px;
+
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .product-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
