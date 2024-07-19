@@ -56,6 +56,10 @@
       font-weight: bold;
     }
 
+    .burger {
+      display: none;
+    }
+
     .navbar__link {
       display: flex;
       flex-direction: column;
@@ -100,6 +104,12 @@
   .navbar__actions {
     .CiSearch1 {
       .navbar__search-icon1 {
+        display: block;
+      }
+    }
+
+    .burger1 {
+      .burger {
         display: block;
       }
     }
