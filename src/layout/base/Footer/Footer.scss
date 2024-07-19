@@ -1,0 +1,98 @@
+@import "../../../scss/base/variant";
+
+.bg_footer {
+  margin-top: 200px;
+  background-color: #f5f5f5;
+  padding: 50px 0px 50px 0px;
+
+  .footer_style {
+    display: flex;
+    justify-content: space-between;
+
+    .footer_images {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .footer_sot {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    .descripton_footer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & h3 {
+        font-family: $variant-font;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23.44px;
+      }
+
+      & p {
+        font-family: $variant-font;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+      }
+    }
+  }
+
+  .buy_class {
+    display: none;
+
+    .buy_moment {
+      display: none;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: $variant-font;
+
+      & button {
+        width: 200px;
+        border-radius: 16px;
+        padding: 14px 0px 14px 0px;
+        border: none;
+        color: white;
+        background-color: $variant-color;
+      }
+
+      .new_style {
+        font-size: 20px;
+        color: $variant-color;
+        margin-bottom: 5px;
+      }
+
+      .old_style {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_style {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .footer_images {
+      .logo {
+        width: 107px;
+        height: 28px;
+      }
+    }
+  }
+  
+  .buy_global {
+    .buy_class {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../scss/base/variant";
+
+.category_style {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  & li {
+    list-style-type: none;
+  }
+
+  & a {
+    font-family: $variant-font;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    line-height: 21.09px;
+    text-decoration: none;
+
+    &:hover{
+       text-decoration:underline;
+    }
+  }
+}
+
+@media (max-width: 765px) {
+     .category_style{
+       display: none;
+     }
+}

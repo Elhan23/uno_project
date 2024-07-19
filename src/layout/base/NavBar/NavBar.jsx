@@ -4,6 +4,9 @@ import logo from "../../../assets/icons/logo.svg";
 import account from "../../../assets/icons/account.svg";
 import shopping from "../../../assets/icons/shopping.svg";
 import { CiSearch } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
+import burger from '../../../assets/images/burger.png'
+
 
 function NavBar() {
   return (
@@ -20,14 +23,23 @@ function NavBar() {
             </div>
           </div>
           <div className="navbar__actions">
-            <button className="navbar__link">
-              <img src={account} alt="Войти" />
-              Войти
-            </button>
+            <span className="CiSearch1">
+              <CiSearch className="navbar__search-icon1" />
+            </span>
+            <NavLink to="/login">
+              <button className="navbar__link">
+                <img src={account} alt="Войти" />
+                <p>Войти</p>
+              </button>
+            </NavLink>
             <button className="navbar__link">
               <img src={shopping} alt="Корзина" />
-              Корзина
+              <p>Корзина</p>
             </button>
+
+            <span>
+                <img src={burger} alt="" />
+            </span>
           </div>
         </div>
       </div>

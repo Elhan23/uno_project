@@ -1,5 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import image45 from "../../assets/images/image45.png";
+import star from "../../assets/images/star.png";
 import "./Product.scss";
 
 const GET_PRODUCT = gql`
@@ -74,32 +76,24 @@ const Product = () => {
   console.log(data);
 
   return (
-    <div>
-      <div className="reviews">
-        <h2>Отзывы</h2>
-        <div className="review-list">
-          <div className="review">
-            <p>Рейтинг: 5 звезд</p>
-            <p>Отличная машина!</p>
-          </div>
-          <div className="review">
-            <p>Рейтинг: 4 звезды</p>
-            <p>Хороший продукт, но доставка задержалась.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="similar-products">
-        <h2>Похожие товары</h2>
-        <div className="product-grid">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="product-card">
-              <img src={product.images[0]?.url} alt={product.title} />
-              <p>{product.title}</p>
-              <p>Цена: {product.sellingPrice} Сом</p>
+    <div className="container">
+      <h2>Похожие товары</h2>
+      <div className="product-grid">
+        {[...Array(8)].map((_, i) => (
+          <div key={i} className="product-card">
+            <div className="img_bg">
+              <img src={image45} alt="" />
             </div>
-          ))}
-        </div>
+            <p>{product.title}</p>
+            <span className="span_style">Швейная машина</span>
+            <span className="star_class">
+              <img src={star} alt="star" />
+              <p>0 отзывов</p>
+            </span>
+            <p>Цена: {product.sellingPrice} Сом</p>
+            <button>Купить сейчас</button>
+          </div>
+        ))}
       </div>
     </div>
   );

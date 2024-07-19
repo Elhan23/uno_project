@@ -50,6 +50,12 @@
     align-items: center;
     gap: 24px;
 
+    .navbar__search-icon1 {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     .navbar__link {
       display: flex;
       flex-direction: column;
@@ -62,6 +68,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 18.75px;
+      color: black;
 
       & img {
         width: 24px;
@@ -71,6 +78,36 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 765px) {
+  .navbar__search-container {
+    & input {
+      display: none;
+    }
+
+    .navbar__search-icon {
+      display: none;
+    }
+  }
+
+  .navbar__actions {
+    .CiSearch1 {
+      .navbar__search-icon1 {
+        display: block;
+      }
+    }
+  }
+
+  .navbar__link {
+    & p {
+      display: none;
     }
   }
 }
